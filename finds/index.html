@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finds - replist.xyz</title>
   <script>
+    // Remove 'index.html' from the URL
     if (window.location.pathname.endsWith("index.html")) {
       window.history.replaceState(null, "", window.location.pathname.replace("index.html", ""));
     }
   </script>
+  <link rel="icon" type="image/gif" href="https://cdn3.emoji.gg/emojis/4363-mommyplease.gif">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -22,8 +24,7 @@
       align-items: flex-start;
       flex-wrap: wrap;
       padding: 20px;
-      cursor: none;
-      /* Hide default cursor */
+      cursor: none; /* Hide default cursor */
     }
 
     .collection-item {
