@@ -1,68 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rep List</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Varela&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <title>Product List</title>
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      margin: 0;
+      font-family: 'Arial', sans-serif;
       background-color: #121212;
       color: white;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 20px;
       cursor: none;
       /* Hide default cursor */
     }
 
-    .heading-3 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 10px;
+    .collection-item {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      margin: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
     }
 
-    .typed-cursor {
-      font-weight: bold;
-      animation: blink 0.7s step-end infinite;
+    .collection-item:hover {
+      transform: translateY(-10px);
     }
 
-    @keyframes blink {
-      50% {
-        border-color: transparent;
-      }
+    .img {
+      display: block;
+      -webkit-user-select: none;
+      margin: auto;
+      cursor: zoom-in;
+      background-color: hsl(0, 0%, 90%);
+      transition: background-color 300ms;
+      width: 100%;
+      height: auto;
+      max-width: 920px;
+      max-height: 920px;
     }
 
-    .text-block-121 {
-      font-size: 0.9rem;
-      font-weight: 400;
-      margin-top: 10px;
-      color: #cccccc;
+    .content {
+      padding: 15px;
     }
 
-    .button-heading1 {
-      display: inline-block;
-      padding: 12px 30px;
-      margin-top: 20px;
+    .product-title {
       font-size: 1.2rem;
-      font-weight: 500;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #ff9900;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      color: #ff9900;
+      margin-bottom: 15px;
+    }
+
+    .button-bb {
       background-color: #ff9900;
       color: white;
       text-decoration: none;
+      padding: 12px 20px;
       border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      display: block;
       transition: background-color 0.3s ease;
     }
 
-    .button-heading1:hover {
+    .button-bb:hover {
       background-color: #e68900;
+    }
+
+    .product-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+    }
+
+    .quantity span {
+      margin-right: 5px;
+    }
+
+    .text-block-124 {
+      color: #888;
+    }
+
+    .text-block-126 {
+      font-size: 0.8rem;
     }
 
     /* Sparkle Cursor Trail CSS */
@@ -88,55 +132,95 @@
         opacity: 0;
       }
     }
-
-    /* Join our Discord Link Styling */
-    .discord-link {
-      font-size: 1.1rem;
-      /* Adjusted font size */
-      font-weight: 500;
-      color: #ff9900;
-      /* Orange color */
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .discord-link:hover {
-      color: #e68900;
-      /* Darker orange on hover */
-    }
   </style>
 </head>
 
 <body>
 
-  <h1 class="heading-3">RepList.xyz<br><span class="typedjs-smart"></span></h1>
-
-  <!-- Join our Discord with styled link -->
-  <div class="text-block-121">
-    <a href="https://discord.gg/application" class="discord-link" target="_blank">Join our Discord</a>
+  <!-- Item 1 -->
+  <div class="collection-item">
+    <img class="img" src="products/4045a955.png" alt="Balenciaga Leather Jacket">
+    <div class="content">
+      <div class="product-title">【POPULAR】 Denim Tears Hoodie 【1:1 Batch】</div>
+      <div class="price">￥269.00 / $37.00</div>
+      <a href="https://l.acbuy.com/ax/465542208" class="button-bb">🔗 Grab With AllChinaBuy 🔗</a>
+      <div class="product-details">
+        <div class="quantity">
+          <span class="text-block-124">3,182</span>
+          <span class="text-block-126">views</span>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <a href="/finds/index.html" class="button-heading1 w-button">Finds</a>
+  <!-- Item 2 -->
+  <div class="collection-item">
+    <img class="img" src="products/6860ebc9.png" alt="Sp5der Hoodie">
+    <div class="content">
+      <div class="product-title">Sp5der hoodies 【1:1 Batch】</div>
+      <div class="price">¥ 279 / $38.47</div>
+      <a href="https://l.acbuy.com/ax/2694209120" class="button-bb">🔗 Grab With AllChinaBuy 🔗</a>
+      <div class="product-details">
+        <div class="quantity">
+          <span class="text-block-124">1,283</span>
+          <span class="text-block-126">views</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Add the Typed.js script -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Item 3 -->
+  <div class="collection-item">
+    <img class="img" src="products/f237a22f.png" alt="Fear Of God Hoodie">
+    <div class="content">
+      <div class="product-title">Fear Of God Hoodies 【1:1 Batch】</div>
+      <div class="price">¥ 139 / $19.17</div>
+      <a href="https://l.acbuy.com/ax/1397169899" class="button-bb">🔗 Grab With AllChinaBuy 🔗</a>
+      <div class="product-details">
+        <div class="quantity">
+          <span class="text-block-124">823</span>
+          <span class="text-block-126">views</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="collection-item">
+    <img class="img" src="products/6ab9c9d0.jpg" alt="Fear Of God Hoodie">
+    <div class="content">
+      <div class="product-title">【GX】Jordan 4s Kaws 【Best Batch】</div>
+      <div class="price">¥ 430 / $59.30</div>
+      <a href="https://l.acbuy.com/ax/728215334" class="button-bb">🔗 Grab With AllChinaBuy 🔗</a>
+      <div class="product-details">
+        <div class="quantity">
+          <span class="text-block-124">3,949</span>
+          <span class="text-block-126">views</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="collection-item">
+    <img class="img" src="products/a5e0d8f6.jpg" alt="Fear Of God Hoodie">
+    <div class="content">
+      <div class="product-title">【GX】Jordan 4 Black Cats 【Best Batch】</div>
+      <div class="price">¥ 460 / $63.30</div>
+      <a href="https://l.acbuy.com/ax/728215334" class="button-bb">🔗 Grab With AllChinaBuy 🔗</a>
+      <div class="product-details">
+        <div class="quantity">
+          <span class="text-block-124">3,311</span>
+          <span class="text-block-126">views</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- More items can be added below using the same structure -->
+
   <script>
-    var options = {
-      strings: [
-        ".gg/applications",
-        "#1 Best Website For Reps!",
-        "F*ck all you link sellers"
-      ],
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 1000,
-      startDelay: 500,
-      loop: true,
-      showCursor: true
-    };
-
-    var typed = new Typed(".typedjs-smart", options);
-
     // Sparkle Cursor Effect
     document.addEventListener('mousemove', (e) => {
       // Create a sparkle element
@@ -144,8 +228,8 @@
       sparkle.classList.add('sparkle');
 
       // Position the sparkle at the mouse coordinates
-      sparkle.style.left = ${e.pageX - 5}px; // Centering the sparkles around the cursor
-      sparkle.style.top = ${e.pageY - 5}px;
+      sparkle.style.left = `${e.pageX - 5}px`; // Centering the sparkles around the cursor
+      sparkle.style.top = `${e.pageY - 5}px`;
 
       // Append the sparkle to the body
       document.body.appendChild(sparkle);
