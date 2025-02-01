@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product List</title>
+  <script>
+    if (window.location.pathname.endsWith("index.html")) {
+      window.history.replaceState(null, "", window.location.pathname.replace("index.html", ""));
+    }
+  </script>
   <style>
     body {
       font-family: 'Arial', sans-serif;
